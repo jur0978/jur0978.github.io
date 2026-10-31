@@ -61,7 +61,7 @@ footer .note{margin:0; color:var(--muted); font-size:14px}
 h2{color:#c9a227;text-transform:uppercase;letter-spacing:.18em;font-size:12px}
 .card{background:#221d1a;border:1px solid #332c26;border-radius:2px;padding:20px}
 body::before{content:'';display:block;height:5px;background:#c9a227;position:sticky;top:0;z-index:9}
-background-image:repeating-linear-gradient(0deg, transparent 0 39px, #332c26 39px 40px);
+body::after{content:'';position:fixed;inset:0;z-index:0;pointer-events:none;background-image:repeating-linear-gradient(0deg, transparent 0 39px, #332c26 39px 40px)}
 </style>
 </head>
 <body>
@@ -78,7 +78,7 @@ background-image:repeating-linear-gradient(0deg, transparent 0 39px, #332c26 39p
   <h2>关于</h2>
   <p>我是 jur0978。同样一段话，不同写法花掉的 token 不一样——长堆栈、冗余客套、重复的 JSON 键，都是能省的地方。
 
-tokenlens 估算文本编码后的 token 数，按段落给出占用，并指出那些「意思一样但特别费 token」的表达。它是估算器，不是精确计数器——精确计数依赖具体分词器，这一点它说在前面。</p>
+tokenlens 估算文本编码后的 token 数，按段落给出占用，并指出那些「意思一样但特别费 token」的表达。它是估算器，不是精确计数器——精确计数依赖具体分词器，这一点它说在前面。 当前以硕士阶段研究角色的方式推进项目。</p>
   <ul class="traits">
     <li>只做文本的 token 占用估算，不做看起来更通用的事。</li>
     <li>结论要能追到具体的证据，不接受「一般来说」。</li>
@@ -104,12 +104,20 @@ tokenlens 估算文本编码后的 token 数，按段落给出占用，并指出
       <p>估算值差多少才值得在意？</p>
       <span class="status">在做工具</span>
     </article>
+    <article class="card">
+      <h3>在推进的问题</h3>
+      <p>（文本的 token 占用估算场景）如何让分词器之间的差异的度量结果能被第三方复核？用口径一致性比对输出每个分量的贡献。</p>
+      <span class="status">进行中</span>
+    </article>
   </div>
 </section>
 
 <section id="work">
   <h2>开源</h2>
   <ul class="repos">
+    <li><div class="name"><a href="https://github.com/jur0978/consistency_reproducible_pipeline_15936f6c" rel="noopener">consistency_reproducible_pipeline_15936f6c</a></div>
+      <div class="desc">（文本的 token 占用估算场景）如何让分词器之间的差异的度量结果能被第三方复核？用口径一致性比对输出每个分量的贡献。</div>
+    </li>
     <li><div class="name"><a href="https://github.com/jur0978/tokenlens" rel="noopener">tokenlens</a></div>
       <div class="desc">估算文本编码后的 token 数，按段落给出占用并指出可替换的高耗词。</div>
     </li>
